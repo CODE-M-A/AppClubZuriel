@@ -1,0 +1,113 @@
+<ion-content>
+  
+  <div id="header"style="background-image: url('assets/fondo.png');">
+    <div id="app-bar">
+      <ion-icon name="arrow-back"routerLink="/menu"></ion-icon>
+    </div>
+
+    <div id="logo">
+      <img src="assets/icon/logo.png" alt="logo" />
+    </div>
+    
+  </div>
+  <!-- <div>
+    <img src="assets/icon/fondoClub.jpg" alt="fondo">
+  </div> -->
+  <ion-content>
+    
+  <ion-button routerLink="/agregar-actualizar-tarea" class="ion-margin" mode="ios">
+    Agrega tarea
+    <ion-icon slot="end" name="add-circle-outline"></ion-icon>
+  </ion-button>
+
+  <!-- <ion-card>
+    
+    <ion-card-content>
+      
+      
+    </ion-card-content>
+  </ion-card> -->
+
+  <!-- <ion-content> -->
+    <ion-grid>
+      <ion-row>
+      <ion-col *ngFor="let actividad of actividades" size-lg="6" size-md="6" size-sm="12" size="12" >
+      <ion-card mode="ios">
+
+        <ion-grid >
+          <ion-row>
+            <ion-col class="ion-text-center" size-lg="5" size-md="5" size-sm="4" size="12"></ion-col>
+
+            <circle-progress
+            [percent]="getPercentage(actividad)"
+            [radius]="65"
+            [outerStrokeWidth]="6"
+            [innerStrokeWidth]="4"
+            [outerStrokeColor]="'#78C000'"
+            [innerStrokeColor]="'#C7E596'"
+            [animation]="true"
+            [animationDuration]="300"
+            [subtitle]="'Progreso'"
+            ></circle-progress>
+
+            <ion-col class="ion-no-padding" size-lg="7" size-md="7" size-sm="8" size="12">
+              <div class="titulo">{{actividad.titulo}}</div>
+              <p>{{actividad.descripcion | slice:0:99}}... </p>
+
+              <div class="ion-text-center">
+                <ion-button (click)="agregarActualizarTarea(actividades)" class="actividad-btn" mode="ios" size="small">
+                  Ver Tarea
+                  <ion-icon slot="end" name="eye-outline"></ion-icon>
+                </ion-button>
+
+                <ion-button class="actividad-btn" mode="ios" color="danger" size="small">
+                  Eliminar Tarea
+                  <ion-icon slot="end" name="trash-outline"></ion-icon>
+                </ion-button>
+
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        
+            
+        
+        
+
+        
+
+      </ion-card>
+    </ion-col> 
+    </ion-row>
+    </ion-grid>
+  </ion-content>
+</ion-content>
+
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Welcome</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Welcome</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content> -->
+
+
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content> -->

@@ -1,0 +1,181 @@
+ion-content{
+    --background: #fff;
+   
+
+    #header{
+        height: 10%;
+        background-size:cover;
+        background-position:center ;
+        display: flex;
+        flex-direction: column;
+        color: #a31a1a;
+        border-radius: 0px 0px 20px 20px;
+
+        #app-bar{
+            height: 60px;
+            padding: 0 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            ion-icon{
+                font-size: 24px;
+            }
+        }
+        #logo{
+            width: 55px;
+            height: 55px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            align-self: center;
+            margin-top: -50px;
+            background: #ffffff;
+            img{
+                width: 80%;
+            }
+        }
+        
+        // h1{
+        //     text-align: center;
+        //     font-weight: bold;
+        //     margin: 0;
+        //     font-size: 20px;
+        //     letter-spacing: 1px;
+        //     margin-top: 5px;
+        // }
+    }
+
+    
+    
+    ion-card{
+        //background-color: rgba(10, 10, 10, 0.459);
+        //background: #fff;
+        //box-shadow: none;
+        //position: absolute;
+        //top: 37%;
+        //left: 5%;
+        //right: 5%;
+        
+        border-radius: 20px;
+        padding: 10px;
+        min-height: 200px;
+
+
+
+        
+
+        
+
+        // p{
+        //     text-align: center;
+        //     font-size: 16px;
+        //     margin-bottom: 45px;
+
+        // }
+
+        ion-button{
+            height: 40px;
+            box-shadow: none;
+            text-transform: initial;
+            font-size: 16px;
+            letter-spacing: 0;
+            font-weight: 400;
+            //border-radius: 10px;
+
+        }
+
+        // .line-text{
+        //     padding: 2px;
+        //     margin-top:40px;
+        //     position: relative;
+        //     height: 20px;
+
+        //     .lines {
+        //         height: 1px;
+        //         background: #858585;
+        //         display: block;
+        //     }
+        //     .text{
+        //         position: absolute;
+        //         top: -8px;
+        //         left:50%;
+        //         transform: translateX(-50%);
+        //         background: #fff;
+        //         padding: 0 15px;
+        //         font-size: 12px;
+        //         font-weight: 500;
+        //         color: #5e5e5e;
+        //     }
+        // }
+
+        // .socials{
+        //     margin-top:18px;
+        //     display: flex;
+        //     justify-content: center;
+        //     margin-bottom: 10px;
+
+        //     ion-button{
+        //         margin: 5px;
+        //         --padding-start:12px;
+        //         --padding-end:12px;
+        //         ion-icon{
+        //             font-size:18px;
+        //         }
+        //     }
+
+        //     .btn-fb{
+        //         --background:#3b5998;
+        //     }
+        //     .btn-tt{
+        //         --background:#010101;
+        //     }
+        //     .btn-go{
+        //         --background:#fd684f;
+        //     }
+            
+        // }
+    }
+
+    ion-card:hover{
+        cursor: pointer;
+        background: var(--ion-color-light);
+    }
+
+    .titulo{
+        font-size: 18px;
+        font-weight: bold;
+        padding-top: 10px;
+        line-height: 20px;
+    }
+
+    .actividad-btn{
+        width: 120;
+    }
+
+    h1{
+        color: #020202;
+        font-weight: bold;
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .item-header{
+        --padding-top: 30px;
+
+        ion-label{
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+    }
+
+    ion-range{
+        --bar-background:rgba(128, 128, 128, 0.281);
+        --bar-background-active:var(--ion-color-success);
+        --height: 20px;
+        --knob-size: 5px;
+    }
+}

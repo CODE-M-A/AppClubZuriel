@@ -1,0 +1,67 @@
+<ion-content>
+  <div id="header">
+    <div id="app-bar">
+      <ion-icon name="arrow-back" routerLink="/menu-reportes-actividades"></ion-icon>
+      <div id="logo">
+        <img src="assets/icon/logo.png" alt="" />
+      </div>
+      <div></div>
+    </div>
+
+    <h1 href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+      Reportes</h1>
+  </div>
+
+  <ion-card-content>
+    
+    <ion-card-header>
+      <ion-card-title class="custom-title">Descripcion</ion-card-title>
+      <ion-card-subtitle class="custom-subtitle">Describir reporte al conquistador.</ion-card-subtitle>
+    </ion-card-header>
+    <ion-list>
+      <ion-item>
+        <ion-input placeholder="Describir la Observacion" [(ngModel)]="observaciones" size="large"></ion-input>
+        
+      </ion-item>
+      <ion-button id="present-alert" class="boton-agregas" expand="full" (click)="agregarDescripcion()"  routerLink="/generar-reporte">Agregar</ion-button>
+      
+      <!-- <ion-alert
+  trigger="present-alert"
+  header="Alert!"
+  [buttons]="alertButtons"
+  (didDismiss)="setResult($event)"
+></ion-alert> -->
+
+    </ion-list>
+
+  </ion-card-content>
+
+
+</ion-content>
+
+
+
+
+
+
+
+<!-- <ion-card>
+    
+  <ion-card-content>
+    
+    <ion-card-header>
+      <ion-card-title class="custom-title">Descripcion</ion-card-title>
+      <ion-card-subtitle class="custom-subtitle">Describir reporte al conquistador.</ion-card-subtitle>
+    </ion-card-header>
+    <ion-list>
+      <ion-item>
+        <ion-input placeholder="Describir la Observacion" [(ngModel)]="observaciones" size="large"></ion-input>
+        
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+
+  <ion-button expand="full" (click)="agregarDescripcion()" routerLink="/generar-reporte">Agregar</ion-button>
+
+  
+</ion-card> -->

@@ -1,0 +1,45 @@
+<ion-content>
+  <div id="header">
+    <div id="app-bar">
+      <ion-icon name="arrow-back" routerLink="/menu-reportes-actividades"></ion-icon>
+      <div id="logo">
+        <img src="assets/icon/logo.png" alt="" />
+      </div>
+      <div></div>
+    </div>
+
+    <h1 href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+      Lista</h1>
+  </div>
+
+  <ion-card-content>
+    <ion-header>
+      <ion-toolbar>
+        <ion-searchbar (input)="filterItems($event)"></ion-searchbar>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-list>
+      <ion-item lines="none" class="column-titles">
+        <ion-label class="title-label" style="font-weight: bold;"
+          style="font-weight: bold; border-right: 1px solid #000; text-align: center">Nombre</ion-label>
+        <ion-label class="title-label" style="font-weight: bold;"
+          style="font-weight: bold; border-right: 1px solid #000; text-align: center;">Apellido</ion-label>
+        <ion-label class="title-label" style="font-weight: bold;"
+          style="font-weight: bold; text-align: center;">Unidad</ion-label>
+        <!-- <ion-label class="title-label" style="font-weight: bold; text-align: center;">Clase</ion-label> -->
+      </ion-item>
+
+      <ion-item *ngFor="let item of filterListas" style="text-align: center;">
+        <ion-label>{{ item.nombre }}</ion-label>
+        <ion-label>{{ item.apellido }}</ion-label>
+        <ion-label>{{ item.unidad }}</ion-label>
+        <!-- <ion-label>{{ item.clase }}</ion-label> -->
+        <!-- <ion-icon name="add-circle-outline" routerLink="/registro-reportes"></ion-icon> -->
+        <ion-icon name="caret-forward-circle-outline" routerLink="/registro-reportes"></ion-icon>
+
+      </ion-item>
+    </ion-list>
+
+  </ion-card-content>
+</ion-content>
