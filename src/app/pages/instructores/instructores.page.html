@@ -1,7 +1,7 @@
 <ion-content>
   <div id="header">
     <div id="app-bar">
-      <ion-icon name="arrow-back" routerLink="/menu"></ion-icon>
+      <ion-icon name="arrow-back" (click)="goBack()"></ion-icon>
       <div id="logo">
         <img src="assets/icon/logo.png" alt="" />
       </div>
@@ -28,7 +28,7 @@
         <!-- <ion-label class="title-label" style="font-weight: bold; text-align: center;">Clase</ion-label> -->
       </ion-item>
 
-      <ion-item *ngFor="let item of filterListas" >
+      <ion-item *ngFor="let item of listaUsuariosIntructor" >
         <ion-label>{{ item.nombre }}</ion-label>
         <ion-label>{{ item.apellido }}</ion-label>
         <!-- <ion-label>{{ item.unidad }}</ion-label> -->

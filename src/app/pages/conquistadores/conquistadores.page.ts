@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from 'src/app/models/usuario.model';
+import { Location } from '@angular/common';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-conquistadores',
@@ -6,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./conquistadores.page.scss'],
 })
 export class ConquistadoresPage implements OnInit {
+
+  listaUsuariosConquis : Usuario[]
 
   listasConquistadores = [
     {nombre:"Juan", apellido:"Merlos", unidad:"Panteras", clase:"Amigo"},
@@ -24,9 +29,10 @@ export class ConquistadoresPage implements OnInit {
 
 
   filterListas =[...this.listasConquistadores];
-  constructor() { }
+  constructor(private userService: UsuarioService, private location: Location) { }
 
   ngOnInit() {
+    this.obtenerListaConquis()
   }
 
   //funcion para filtrar datos
@@ -35,6 +41,21 @@ export class ConquistadoresPage implements OnInit {
     this.filterListas = this.listasConquistadores.filter(item =>
       `${item.nombre.toLowerCase()} ${item.apellido.toLowerCase()} ${item.unidad.toLowerCase()} ${item.clase.toLowerCase()}`.includes(searchTerm)
     );
+  }
+  obtenerListaConquis() {
+    this.userService.listaConquis().subscribe(
+      (usuarios: Usuario[]) => {
+        this.listaUsuariosConquis = usuarios
+        // Haz lo que necesites con la lista de conquistadores
+      },
+      (error) => {
+        console.error('Error al obtener la lista de conquistadores:', error);
+      }
+    );
+  }
+
+  goBack(){
+    this.location.back();
   }
 
 }

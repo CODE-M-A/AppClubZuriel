@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from 'src/app/models/usuario.model';
+import { UsuarioService } from 'src/app/services/usuario.service';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-instructores',
@@ -13,6 +17,7 @@ REdireccionar(arg0: string) {
 throw new Error('Method not implemented.');
 }
 
+  listaUsuariosIntructor : Usuario[]
   listasInstructor = [
     {nombre:"Jose Manuel", apellido:"Flores", unidad:"Panteras"},
     {nombre:"Juan Jose", apellido:"Merlos Alacama", unidad:"Panteras"},
@@ -26,9 +31,10 @@ throw new Error('Method not implemented.');
 
   filterListas =[...this.listasInstructor];
 
-  constructor() { }
+  constructor(private userService: UsuarioService,  private location: Location) { }
 
   ngOnInit() {
+    this.listaUsuarioInstru()
   }
 
   //funcion para filtrar datos
@@ -39,8 +45,20 @@ throw new Error('Method not implemented.');
     );
   }
 
-  loginUsuario(){
-    
+  listaUsuarioInstru(){
+    this.userService.listaInstru().subscribe(
+      (usuarios: Usuario[]) => {
+        this.listaUsuariosIntructor = usuarios
+        // Haz lo que necesites con la lista de conquistadores
+      },
+      (error) => {
+        console.error('Error al obtener la lista de conquistadores:', error);
+      }
+    );
+  }
+
+  goBack(){
+    this.location.back();
   }
 
 }

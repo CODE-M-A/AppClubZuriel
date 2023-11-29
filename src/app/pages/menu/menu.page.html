@@ -19,17 +19,17 @@
     <ion-card-content>
 
       <!-- Rol Admin -->
-      <ion-button *ngIf= "rol == 'admin' " expand="block" routerLink="/instructores" style="--background: #9b0202; color: #fff;">Instructores</ion-button><br>
-      <ion-button *ngIf= " rol == 'admin'" expand="block"  routerLink="/conquistadores"style="--background: #9b0202; color: #fff;">Conquistadores</ion-button><br>
-      <ion-button *ngIf= "rol == 'admin' " expand="block" routerLink="/nuevo-usuario" style="--background: #9b0202; color: #fff;">Agregar Usuario</ion-button><br>
+      <ion-button *ngIf= "rol == 1 " expand="block" routerLink="/instructores" style="--background: #9b0202; color: #fff;">Instructores</ion-button><br>
+      <ion-button *ngIf= " rol == 1" expand="block"  routerLink="/conquistadores"style="--background: #9b0202; color: #fff;">Conquistadores</ion-button><br>
+      <ion-button *ngIf= "rol == 1" expand="block" routerLink="/nuevo-usuario" style="--background: #9b0202; color: #fff;">Agregar Usuario</ion-button><br>
       <!-- <ion-button *ngIf= "rol == 'admin'" expand="block"  routerLink="/nuevo-usuario-conquiatador" style="--background: #9b0202; color: #fff;">Conquistadores</ion-button><br>
       <ion-button *ngIf= "rol == 'admin'"  expand="block"  routerLink="/registros" style="--background: #9b0202; color: #fff;">Ver Actividades</ion-button><br>
       <ion-button *ngIf= "rol == 'admin'" expand="block"  routerLink="/login"style="--background: #9b0202; color: #fff;">Ver Reportes</ion-button> -->
       <!-- Rol instructor -->
 
       
-      <ion-button *ngIf= " rol == 'instructor'" expand="block"  routerLink="/actividades" style="--background: #9b0202; color: #fff;">Actividades</ion-button><br>
-      <ion-button *ngIf= " rol == 'instructor'" expand="block"  routerLink="/generar-reporte" style="--background: #9b0202; color: #fff;">Reportes</ion-button><br>
+      <ion-button *ngIf= " rol == 2" expand="block"  routerLink="/actividades" style="--background: #9b0202; color: #fff;">Actividades</ion-button><br>
+      <ion-button *ngIf= " rol == 2" expand="block"  routerLink="/generar-reporte" style="--background: #9b0202; color: #fff;">Reportes</ion-button><br>
 
     </ion-card-content>
   </ion-card>
